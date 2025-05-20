@@ -141,23 +141,6 @@ EzLandlord/
 - POST `/api/payments` - Create new payment
 - PATCH `/api/payments/:id` - Update payment status
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, email your-email@example.com or open an issue in the repository.
-
-## Acknowledgments
 
 - [React.js](https://reactjs.org/)
 - [Express.js](https://expressjs.com/)
