@@ -1,148 +1,69 @@
-# EzLandlord - Property Management System
-
-EzLandlord is a comprehensive property management system designed to help landlords manage their properties, tenants, leases, maintenance requests, and payments efficiently.
-
-## Features
-
-- 📊 **Dashboard**: Overview of key metrics and property statistics
-- 👥 **Tenant Management**: Track tenant information and history
-- 📝 **Lease Management**: Create and manage lease agreements
-- 🔧 **Maintenance Requests**: Handle and track property maintenance
-- 💰 **Payment Tracking**: Monitor rent payments and financial records
-- 🔐 **Authentication**: Secure login and user management
-
-## Tech Stack
-
-### Frontend
-- React.js
-- Vite
-- Axios for API calls
-- CSS for styling
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
-
-## Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB
-- npm or yarn
-
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/EzLandlord.git
-cd EzLandlord
-```
-
-2. Install backend dependencies:
-```bash
-cd backend
-npm install
-```
-
-3. Install frontend dependencies:
-```bash
-cd ../frontend
-npm install
-```
-
-4. Create a `.env` file in the backend directory:
-```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
-```
-
-5. Create a `.env` file in the frontend directory:
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-## Running the Application
-
-1. Start the backend server:
-```bash
-cd backend
-npm start
-```
-
-2. Start the frontend development server:
-```bash
-cd frontend
-npm run dev
-```
-
-The application will be available at `http://localhost:5173`
-
-## Deployment
-
-### Frontend (Vercel)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Set environment variables in Vercel:
-   - `VITE_API_URL`: Your backend API URL
-
-### Backend
-1. Deploy to your preferred hosting service (Render, Railway, Heroku, etc.)
-2. Set environment variables:
-   - `MONGO_URI`: Your MongoDB connection string
-   - `JWT_SECRET`: Your JWT secret
-   - `PORT`: Your preferred port
-
-## Project Structure
-
-```
-EzLandlord/
-├── backend/
-│   ├── models/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │   └── server.js
-│   ├── frontend/
-│   │   ├── src/
-│   │   │   ├── components/
-│   │   │   ├── pages/
-│   │   │   ├── App.jsx
-│   │   │   └── main.jsx
-│   │   └── index.html
-│   └── README.md
-```
-
-## API Endpoints
-
-### Authentication
-- POST `/api/auth/register` - Register new user
-- POST `/api/auth/login` - User login
-
-### Tenants
-- GET `/api/tenants` - Get all tenants
-- POST `/api/tenants` - Create new tenant
-- PUT `/api/tenants/:id` - Update tenant
-- DELETE `/api/tenants/:id` - Delete tenant
-
-### Leases
-- GET `/api/leases` - Get all leases
-- POST `/api/leases` - Create new lease
-- PUT `/api/leases/:id` - Update lease
-- DELETE `/api/leases/:id` - Delete lease
-
-### Maintenance
-- GET `/api/maintenance` - Get all maintenance requests
-- POST `/api/maintenance` - Create maintenance request
-- PATCH `/api/maintenance/:id` - Update maintenance status
-
-### Payments
-- GET `/api/payments` - Get all payments
-- POST `/api/payments` - Create new payment
-- PATCH `/api/payments/:id` - Update payment status
-
-
-- [React.js](https://reactjs.org/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Vite](https://vitejs.dev/)
+PRISM Project – Optimizing Inference Efficiency of LLMs
+Team Gen AI | Cambridge Institute of Technology
+📌 Project Overview
+This project aims to optimize the inference efficiency of Large Language Models (LLMs) using multiple performance-enhancing techniques without compromising output quality. We tested and integrated the following methods:
+- Quantization (INT8)
+- Speculative Decoding (via caching)
+- Baseline comparison
+- Combined optimization (Quant + Spec)
+🎯 Goal
+To build an inference pipeline that:
+- Reduces inference time
+- Minimizes memory usage
+- Provides CLI-based modular control
+- Enables integration-ready design for future deployment
+🧪 Models Used
+• distilgpt2 from Hugging Face → https://huggingface.co/distilgpt2
+• Optimized for prompt generation tasks (text output)
+📂 Folder Structure
+root/
+├── code/
+│   ├── baseline.py             # Basic LLM inference
+│   ├── quant_model.py          # Quantized model inference
+│   ├── spec_decode.py          # Speculative decoding
+│   └── inference.py            # Integrated CLI version
+├── diagrams/
+│   ├── architecture_1.2.png
+│   ├── architecture_2.1.png
+│   └── architecture_2.4.png
+├── benchmark_results.csv       # Timing/memory results
+├── demo_video.mp4              # Walkthrough of CLI execution
+├── docs/
+│   ├── End_Review_PPT.pptx
+│   └── Monthly_Connect_PPTs/
+└── README.md
+⚙️ How to Run
+Requirements:
+• pip install torch transformers psutil
+Scripts:
+• Baseline:
+  python code/baseline.py
+• Quantized:
+  python code/quant_model.py
+• Speculative Decoding:
+  python code/spec_decode.py
+• Combined (Quant + Spec):
+  python code/inference.py --both
+📊 Benchmarked Metrics
+Mode	Inference Time (s)	Memory Usage (MB)	Token Count
+Baseline	2.04	1690	51
+Quant	1.44	1740	50
+Spec	1.48	1638	50
+Both	0.89	1743	50
+🧠 Key Contributions
+• CLI integration of multiple optimization techniques
+• Real-world benchmarking (time/memory/token analysis)
+• Visual dashboards and architecture diagrams
+• Clean, reproducible code structure
+📎 Resources
+• Hugging Face DistilGPT2: https://huggingface.co/distilgpt2
+• Report: docs/End_Review_PPT.pptx
+• Demo video: demo_video.mp4
+• Monthly PPTs: docs/Monthly_Connect_PPTs/
+🧑‍💻 Team
+• Gagan R
+• Aaron CIT
+• Sachith CIT
+• Tushar Mishra CIT
+📅 Final Submission Deadline
+All materials will be uploaded by May 30, 2025, as per SRI-B guidelines.
